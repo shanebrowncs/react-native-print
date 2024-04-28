@@ -80,6 +80,8 @@ public class RNPrintModule extends ReactContextBaseJavaModule {
                     public void run() {
                         // Create a WebView object specifically for printing
                         WebView webView = new WebView(reactContext);
+                        webView.getSettings().setTextZoom(100);
+
                         webView.setWebViewClient(new WebViewClient() {
                             public boolean shouldOverrideUrlLoading(WebView view, String url) {
                                 return false;
